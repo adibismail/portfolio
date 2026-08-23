@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Muhammad Adib Ismail — Technical Profile</title>
+<style>
+  :root {
+    --accent: #1a56db;
+    --text: #1a1a2e;
+    --muted: #555;
+    --border: #dde3f0;
+    --bg-card: #f7f9fc;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    font-size: 10.5pt;
+    color: var(--text);
+    background: #fff;
+    line-height: 1.6;
+  }
+
+  /* ── PAGE LAYOUT ── */
+  .page {
+    width: 210mm;
+    min-height: 297mm;
+    margin: 0 auto;
+    padding: 14mm 16mm;
+  }
+
+  /* ── HEADER ── */
+  header {
+    border-bottom: 2.5px solid var(--accent);
+    padding-bottom: 10px;
+    margin-bottom: 18px;
+  }
+
+  header h1 {
+    font-size: 22pt;
+    font-weight: 700;
+    color: var(--text);
+    letter-spacing: -0.3px;
+  }
+
+  header .title {
+    font-size: 10.5pt;
+    color: var(--accent);
+    font-weight: 600;
+    margin-top: 2px;
+  }
+
+  header .tagline {
+    font-size: 9.5pt;
+    color: var(--muted);
+    margin-top: 4px;
+  }
+
+  /* ── SECTION ── */
+  section { margin-bottom: 20px; }
+
+  h2 {
+    font-size: 11pt;
+    font-weight: 700;
+    color: var(--accent);
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 4px;
+    margin-bottom: 10px;
+  }
+
+  p { color: var(--text); margin-bottom: 6px; text-align: justify; }
+
+  /* ── ARCHITECTURE TABLE ── */
+  .arch-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 9.5pt;
+  }
+
+  .arch-table td {
+    padding: 6px 10px;
+    border: 1px solid var(--border);
+    vertical-align: top;
+  }
+
+  .arch-table td:first-child {
+    width: 22%;
+    font-weight: 700;
+    background: var(--bg-card);
+    color: var(--accent);
+    white-space: nowrap;
+  }
+
+  .arch-table td:last-child { color: var(--muted); }
+
+  /* ── CAPABILITIES GRID ── */
+  .cap-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+  }
+
+  .cap-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--accent);
+    padding: 8px 10px;
+    border-radius: 3px;
+  }
+
+  .cap-card h3 {
+    font-size: 9.5pt;
+    font-weight: 700;
+    margin-bottom: 3px;
+    color: var(--text);
+  }
+
+  .cap-card p {
+    font-size: 9pt;
+    color: var(--muted);
+    margin: 0;
+  }
+
+  /* ── PROJECTS ── */
+  .project {
+    margin-bottom: 12px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .project:last-child { border-bottom: none; margin-bottom: 0; }
+
+  .project-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 2px;
+  }
+
+  .project h3 {
+    font-size: 10.5pt;
+    font-weight: 700;
+    color: var(--text);
+  }
+
+  .project .role {
+    font-size: 8.5pt;
+    color: var(--muted);
+    font-style: italic;
+  }
+
+  .project .tech {
+    font-size: 8.5pt;
+    color: var(--accent);
+    font-weight: 600;
+    margin-bottom: 3px;
+  }
+
+  .project p {
+    font-size: 9.5pt;
+    color: var(--muted);
+    text-align: justify;
+    margin: 0;
+  }
+
+  /* ── TECH STACK ── */
+  .stack-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6px 20px;
+    font-size: 9.5pt;
+  }
+
+  .stack-row { display: flex; gap: 6px; }
+
+  .stack-label {
+    font-weight: 700;
+    color: var(--text);
+    white-space: nowrap;
+    min-width: 110px;
+  }
+
+  .stack-value { color: var(--muted); }
+
+  /* ── CERTIFICATIONS ── */
+  .cert-list { list-style: none; }
+
+  .cert-list li {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    padding: 7px 10px;
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--accent);
+    background: var(--bg-card);
+    border-radius: 3px;
+    margin-bottom: 6px;
+    font-size: 9.5pt;
+  }
+
+  .cert-list li:last-child { margin-bottom: 0; }
+
+  .cert-name { font-weight: 700; color: var(--text); }
+  .cert-issuer-row { display: flex; justify-content: space-between; align-items: baseline; }
+  .cert-issuer { color: var(--muted); }
+  .cert-validation { font-size: 8.5pt; color: var(--muted); font-style: italic; }
+
+  /* ── PRINT ── */
+  @media print {
+    body { background: #fff; }
+    .page { margin: 0; padding: 0; width: 100%; }
+    @page { size: A4; margin: 18mm 16mm 14mm 16mm; }
+
+    .page-number {
+      position: fixed;
+      bottom: 6mm;
+      width: 100%;
+      text-align: center;
+      font-size: 8.5pt;
+      color: #999;
+    }
+
+    .page-number::after {
+      content: counter(page);
+      counter-increment: page;
+    }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- HEADER -->
+  <header>
+    <h1>Muhammad Adib Ismail</h1>
+    <div class="title">Software Engineer &amp; Project Manager</div>
+    <div class="tagline">IoT · Industrial Systems · System Integration · Cloud Infrastructure · Smart Manufacturing</div>
+  </header>
+
+  <!-- PROFILE -->
+  <section>
+    <h2>Profile</h2>
+    <p>
+      I'm a software engineer and project manager with 7 years of experience building and deploying operational systems across IoT, RFID, cloud infrastructure, and enterprise integration. I work across the full technology lifecycle — from requirements and architecture through development, hardware integration, deployment, and production support.
+    </p>
+    <p>
+      My focus is on environments where software needs to communicate with physical devices and deliver reliable operational data to production teams and management. I'm particularly experienced in smart manufacturing and Industry 4.0 contexts, where the challenge is not just building software, but making it work reliably in real operational conditions.
+    </p>
+  </section>
+
+  <!-- CERTIFICATIONS -->
+  <section>
+    <h2>Certifications</h2>
+    <ul class="cert-list">
+      <li>
+        <span class="cert-name">AWS Certified Cloud Practitioner</span>
+        <div class="cert-issuer-row">
+          <span class="cert-issuer">Amazon Web Services Training and Certification</span>
+          <span class="cert-validation">Validation No: 140475d531f94f5092441a42c32e8a7e</span>
+        </div>
+      </li>
+      <li>
+        <span class="cert-name">INFORISK360 Combat of Web Application &mdash; Hacker vs Developer</span>
+        <span class="cert-issuer">INFORISK360</span>
+      </li>
+      <li>
+        <span class="cert-name">Graduate Engineer</span>
+        <div class="cert-issuer-row">
+          <span class="cert-issuer">Board of Engineers Malaysia</span>
+          <span class="cert-validation">Certificate No: 1919-050200-T1-8304</span>
+        </div>
+      </li>
+    </ul>
+  </section>
+
+  <!-- PROJECTS -->
+  <section>
+    <h2>Selected Projects</h2>
+
+    <div class="project">
+      <div class="project-header">
+        <h3>Smart Factory Solution</h3>
+        <span class="role">Backend Developer &middot; DevOps</span>
+      </div>
+      <div class="tech">Laravel &middot; MySQL &middot; Python &middot; AWS</div>
+      <p>Industrial IoT solution focused on smart manufacturing, API integration, operational data, and cloud deployment. The project involved connecting operational processes with software and cloud infrastructure to support the digitalization of manufacturing activities.</p>
+    </div>
+
+    <div class="project">
+      <div class="project-header">
+        <h3>RFID Library System &mdash; UTAR</h3>
+        <span class="role">Project Manager &middot; Tech Lead &middot; System Integration</span>
+      </div>
+      <div class="tech">Node.js &middot; Laravel &middot; MySQL &middot; AWS &middot; Docker &middot; RFID</div>
+      <p>A large operational RFID system involving physical RFID hardware, application integration, databases, and production deployment. The architecture and implementation are directly relevant to manufacturing scenarios involving asset identification, material tracking, inventory management, and traceability.</p>
+    </div>
+
+    <div class="project" style="page-break-before: always;">
+      <div class="project-header">
+        <h3>RFID Convocation System &mdash; UTAR</h3>
+        <span class="role">Project Manager &middot; Tech Lead &middot; System Integration</span>
+      </div>
+      <div class="tech">RFID &middot; Node.js &middot; Laravel &middot; MySQL &middot; AWS</div>
+      <p>An RFID-enabled operational system designed to automate identification and tracking during large-scale convocation activities. The underlying technical principles are directly transferable to manufacturing use cases involving automated identification, high-volume tracking, and real-time event processing.</p>
+    </div>
+
+    <div class="project">
+      <div class="project-header">
+        <h3>Linen Management System v2</h3>
+        <span class="role">Tech Lead &middot; Backend Engineer &middot; DevOps</span>
+      </div>
+      <div class="tech">Laravel &middot; PostgreSQL &middot; AWS &middot; RFID</div>
+      <p>A high-volume RFID tracking platform managing the movement and lifecycle of physical assets through automated identification and transaction tracking. Highly transferable to manufacturing environments involving material movement, WIP tracking, asset management, and product traceability.</p>
+    </div>
+
+    <div class="project">
+      <div class="project-header">
+        <h3>WeCare Platform &mdash; St. John Home for Elderly</h3>
+        <span class="role">Project Manager &middot; Tech Lead &middot; Full-Stack &middot; DevOps</span>
+      </div>
+      <div class="tech">Laravel &middot; Node.js &middot; MySQL &middot; AWS</div>
+      <p>An operational management platform designed to digitize workflows and centralize information within a single software platform. The engineering approach is directly applicable to factory environments requiring complex operational workflows, multiple users, real-time information, and reliable production systems.</p>
+    </div>
+
+  </section>
+
+  <!-- CAPABILITIES -->
+  <section>
+    <h2>What I Bring</h2>
+    <div class="cap-grid">
+      <div class="cap-card">
+        <h3>System Integration</h3>
+        <p>Connecting devices, applications, databases, APIs, and cloud services into a single operational workflow.</p>
+      </div>
+      <div class="cap-card">
+        <h3>IoT &amp; Data Collection</h3>
+        <p>Building systems that collect data from physical devices and turn it into usable operational information.</p>
+      </div>
+      <div class="cap-card">
+        <h3>Factory-Floor Software</h3>
+        <p>Developing applications that support real-world production workflows, not isolated office-based processes.</p>
+      </div>
+      <div class="cap-card">
+        <h3>Infrastructure &amp; Deployment</h3>
+        <p>Deploying and maintaining applications across AWS, Linux, Docker, and on-premise environments.</p>
+      </div>
+      <div class="cap-card">
+        <h3>Production Reliability</h3>
+        <p>Troubleshooting issues between hardware, networks, software, databases, and users in live production systems.</p>
+      </div>
+      <div class="cap-card">
+        <h3>Project Delivery</h3>
+        <p>End-to-end delivery from requirements and architecture through development, UAT, deployment, and post-production support.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- TECHNOLOGY ARCHITECTURE -->
+  <section style="page-break-before: always;">
+    <h2>Technology Architecture</h2>
+    <table class="arch-table">
+      <tr>
+        <td>Physical Layer</td>
+        <td>RFID readers, sensors, beacons, IoT devices, connected equipment</td>
+      </tr>
+      <tr>
+        <td>Communication</td>
+        <td>MQTT, REST APIs, TCP/IP, Wi-Fi / Ethernet, device-to-server communication</td>
+      </tr>
+      <tr>
+        <td>Application</td>
+        <td>Node.js, Laravel, Python, React, Angular, TypeScript</td>
+      </tr>
+      <tr>
+        <td>Data</td>
+        <td>MySQL, PostgreSQL, MongoDB, SQLite</td>
+      </tr>
+      <tr>
+        <td>Infrastructure</td>
+        <td>Linux, Docker, AWS, on-premise servers, CI/CD pipelines</td>
+      </tr>
+      <tr>
+        <td>Business Layer</td>
+        <td>Production monitoring, asset tracking, inventory, traceability, operational reporting, ERP integration</td>
+      </tr>
+    </table>
+  </section>
+
+  <!-- TECH STACK -->
+  <section>
+    <h2>Core Technology Stack</h2>
+    <div class="stack-grid">
+      <div class="stack-row">
+        <span class="stack-label">Backend</span>
+        <span class="stack-value">Node.js, Express, Laravel, PHP, Python, Flask</span>
+      </div>
+      <div class="stack-row">
+        <span class="stack-label">IoT &amp; Integration</span>
+        <span class="stack-value">RFID, MQTT, AWS IoT, Beacons, Edge Computing, REST APIs</span>
+      </div>
+      <div class="stack-row">
+        <span class="stack-label">Frontend</span>
+        <span class="stack-value">React, TypeScript, Angular</span>
+      </div>
+      <div class="stack-row">
+        <span class="stack-label">Cloud &amp; Infra</span>
+        <span class="stack-value">AWS, Docker, Linux, CI/CD, Elastic Beanstalk, RDS, S3</span>
+      </div>
+      <div class="stack-row">
+        <span class="stack-label">Databases</span>
+        <span class="stack-value">MySQL, PostgreSQL, MongoDB, SQLite</span>
+      </div>
+      <div class="stack-row">
+        <span class="stack-label">Dev &amp; Operations</span>
+        <span class="stack-value">Git, GitHub, Jira, Production Deployment, System Troubleshooting</span>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<div class="page-number"></div>
+</body>
+</html>
