@@ -46,4 +46,19 @@ document.addEventListener('DOMContentLoaded', () => {
         section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
         observer.observe(section);
     });
+
+    // Show all projects toggle
+    const toggleBtn = document.getElementById('toggle-projects');
+    const allProjectsWrapper = document.getElementById('all-projects-wrapper');
+    let expanded = false;
+
+    toggleBtn.addEventListener('click', () => {
+        expanded = !expanded;
+        if (expanded) {
+            allProjectsWrapper.style.display = 'block';
+        } else {
+            allProjectsWrapper.style.display = 'none';
+        }
+        toggleBtn.textContent = expanded ? 'Show less' : 'Show all projects';
+    });
 });

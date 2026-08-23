@@ -217,6 +217,82 @@ h2 {
     font-weight: 500;
 }
 
+/* What I Do Section */
+.what-i-do {
+    background-color: var(--bg-primary);
+}
+
+.what-i-do-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 2rem;
+}
+
+.what-card {
+    padding: 2rem;
+    border-radius: 1rem;
+    border: 1px solid var(--border-color);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.what-card:hover {
+    border-color: var(--primary-color);
+    box-shadow: var(--shadow);
+}
+
+.what-icon {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.what-card h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 0.75rem;
+}
+
+.what-card p {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    line-height: 1.7;
+    text-align: justify;
+}
+
+/* Projects toggle */
+.hidden {
+    display: none;
+}
+
+.projects-toggle {
+    text-align: center;
+    margin-top: 2.5rem;
+}
+
+.all-projects-divider {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin: 3rem 0 2rem;
+}
+
+.all-projects-divider::before,
+.all-projects-divider::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--border-color);
+}
+
+.all-projects-divider span {
+    color: var(--text-secondary);
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    white-space: nowrap;
+}
+
 /* Projects Section */
 .projects {
     background-color: var(--bg-secondary);
@@ -294,6 +370,7 @@ h2 {
     color: var(--text-secondary);
     margin-bottom: 1.5rem;
     line-height: 1.6;
+    text-align: justify;
 }
 
 .project-tech {

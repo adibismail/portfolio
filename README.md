@@ -1,42 +1,46 @@
-# Portfolio Website
+# Muhammad Adib Ismail — Portfolio
 
-A modern, responsive portfolio website showcasing skills, projects, and contact information.
+Personal portfolio website for Muhammad Adib Ismail, Software Engineer & Project Manager based in Malaysia.
 
-## Features
+Live at: `https://adibismail.github.io/portfolio` *(update with actual URL)*
 
-- **Modern Design**: Clean, professional layout with smooth animations
-- **Responsive**: Optimized for desktop, tablet, and mobile devices
-- **Fast Loading**: Minimal dependencies and optimized assets
-- **GitHub Pages Ready**: Static files ready for deployment
+## About
 
-## Customization
+A clean, responsive single-page portfolio built with vanilla HTML, CSS, and JavaScript. No frameworks, no build tools — just static files ready to deploy anywhere.
 
-1. **Personal Information**: Update name, title, and description in `index.html`
-2. **Skills**: Modify the skills section with your technologies
-3. **Projects**: Replace example projects with your actual work
-4. **Contact Links**: Update email, LinkedIn, and GitHub URLs
-5. **Colors**: Customize the color scheme in CSS variables at the top of `style.css`
+## Sections
 
-## Deployment to GitHub Pages
-
-1. Push this repository to GitHub
-2. Go to repository Settings > Pages
-3. Select "Deploy from a branch" and choose `main` branch
-4. Your site will be available at `https://yourusername.github.io/repository-name`
+- **Hero** — Intro and call-to-action
+- **About** — Personal background and experience summary
+- **Skills** — Languages & Frameworks, Cloud & DevOps, IoT & Integration, Databases & Tools
+- **What I Do** — IoT & Factory Systems, System Integration, Cloud & Deployment, Project & Team Leadership
+- **Projects** — 5 featured projects with a "Show all projects" toggle for the remaining 10
+- **Contact** — Email, WhatsApp, LinkedIn
 
 ## File Structure
 
 ```
 portfolio/
-├── index.html          # Main HTML file
-├── style.css           # Styles and responsive design
-├── script.js           # Interactive functionality
-└── README.md           # Documentation
+├── index.html      # Markup and content
+├── style.css       # Styles, layout, and responsive design
+├── script.js       # Smooth scroll, navbar effect, fade-in animations, projects toggle
+└── README.md       # This file
 ```
+
+## Deployment to GitHub Pages
+
+1. Push this repository to GitHub
+2. Go to repository **Settings > Pages**
+3. Select **Deploy from a branch** and choose `main`
+4. Site will be available at `https://<username>.github.io/<repository-name>`
+
+## Customization
+
+- **Colors** — CSS variables at the top of `style.css`
+- **Content** — All text and project data is in `index.html`
+- **Featured projects** — Edit the `#featured-projects` grid in `index.html`
+- **More projects** — Edit the `#all-projects` grid inside `#all-projects-wrapper`
 
 ## Browser Support
 
-- Chrome (latest)
-- Firefox (latest)
-- Safari (latest)
-- Edge (latest)
+Chrome, Firefox, Safari, Edge (latest versions)

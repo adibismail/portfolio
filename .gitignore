@@ -38,3 +38,6 @@ build/
 # Temporary files
 *.tmp
 *.temp
+
+# Extra file
+addon.md
