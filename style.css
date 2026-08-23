@@ -229,9 +229,11 @@ h2 {
 }
 
 .what-card {
+    background: white;
     padding: 2rem;
     border-radius: 1rem;
     border: 1px solid var(--border-color);
+    box-shadow: var(--shadow);
     transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
