@@ -260,10 +260,6 @@ h2 {
 }
 
 /* Projects toggle */
-.hidden {
-    display: none;
-}
-
 .projects-toggle {
     text-align: center;
     margin-top: 2.5rem;
